@@ -84,7 +84,7 @@ body {
 	font-weight: 600;
 	line-height: 1;
 	font-size: 18px;
-	background-color: #8FA294;
+	background-color: #fff;
 	color: #5C6680;
 }
 .wrapper {
@@ -101,3 +101,84 @@ body {
 	padding: 0 15px;
 	margin: 0 auto;
 }
+/*-------------------------------HEADER--------------------------------------------*/
+
+.header {
+	
+}
+.header__container {
+	min-height: 130px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header__logo {
+	display: inline-block;
+}
+.header__menu {
+	padding: 0 0 0 50px;
+}
+.menu {
+	
+}
+.menu__body {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 5px 0;
+	align-items: center;
+}
+.menu__body>*:not(:last-child) {
+	margin: 0 47px 0 0;
+}
+.menu__list {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+@media (max-width: 650px) {
+	.menu__list {
+		max-width: 200px;
+	}
+}
+
+@media (max-width: 485px) {
+	.menu__body>*:not(:last-child)	{
+		margin: 0;
+	}
+	.menu__list {
+		max-width: 150px;
+		padding: 10px 0;
+	}	
+}
+
+.menu__item {
+	padding: 5px 0;
+}
+
+.menu__item:not(:last-child) {
+	margin: 0 47px 0 0;
+}
+.menu__link {
+	font-size: 18px;
+	line-height: 138%;
+	text-transform: capitalize;
+	color: #1D2B4F;
+}
+
+.menu__link:hover {
+	text-decoration: underline;
+}
+.menu__btn {
+	display: flex;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	font-size: 18px;
+	line-height: 138%;
+	text-transform: capitalize;
+	color: #FF6B00;
+	border: 1px solid #FF6B00;
+	padding: 8px 18px;
+}
+
