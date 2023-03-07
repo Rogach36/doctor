@@ -101,6 +101,36 @@ body {
 	padding: 0 15px;
 	margin: 0 auto;
 }
+
+/* .btn {display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	border: 1px solid #FF6B00;
+	transition: all 0.3s ease 0s;	
+	
+} */
+
+._ibg {
+	position: relative;
+}
+
+._ibg img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	object-fit: cover;
+}
+
+/*-------------------------------PAGE----------------------------------*/
+.page {
+	flex: 1 1 auto;
+}
+.page__main-block {
+}
 /*-------------------------------HEADER--------------------------------------------*/
 
 .header {
@@ -169,16 +199,204 @@ body {
 .menu__link:hover {
 	text-decoration: underline;
 }
-.menu__btn {
+
+.menu__btn {	
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	text-align: center;
 	justify-content: center;
+	border: 1px solid #FF6B00;
+	transition: all 0.3s ease 0s;	
 	font-size: 18px;
 	line-height: 138%;
 	text-transform: capitalize;
 	color: #FF6B00;
-	border: 1px solid #FF6B00;
 	padding: 8px 18px;
 }
+.menu__btn:hover {
+	color: #fff;
+	background-color: #FF6B00;
+}
 
+/*--------------------------MAIN-BLOCK----------------------------*/
+.main-block {
+	padding: 58px 0 0 0;
+	overflow: hidden;
+	position: relative;
+}
+
+.main-block::after {
+	
+}
+
+.main-block__container {
+	display: flex;
+	position: relative;
+	padding: 0 15px 139px 15px;
+}
+
+.main-block__container::after {
+	position: absolute;
+	content: "";
+	right: 1%;
+	top: -5%;
+	width: 507px;
+	height: 650px;
+	z-index: 1;
+	background-image: url("../img/main-block/Group\ 239211.svg");
+	background-repeat: no-repeat;
+}
+
+.main-block__container::before {
+	position: absolute;
+	content: "";
+	right: 0;
+	top: -10%;
+	width: 100%;
+	height: 110%;
+	background-color: #131E3A;
+	transform: translate(88%, 0px);
+} 
+
+.main-block__body {
+	flex: 0 1 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	max-width: 498px;
+	padding: 0 30px 0 0;
+	position: relative;
+	z-index: 9;
+} 
+
+.main-block__title {
+	font-weight: 800;
+	font-size: 64px;
+	line-height: 109%;
+	letter-spacing: -0.05em;
+	color: #1D2B4F;
+	margin: 0 0 24px 0;
+}
+
+
+.main-block__text {
+	font-family: 'Poppins';
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 181%;
+	color: rgba(74, 85, 114, 0.9);
+	margin: 0 0 56px 0;
+}
+
+.main-block__btn {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	border: 1px solid #FF6B00;
+	background-color: #FF6B00;
+	color: #fff;
+	transition: all 0.3s ease 0s;	
+	min-height: 66px;
+	padding: 5px 28px;	
+}
+
+.main-block__btn:hover {
+	background-color: #fff;
+	color: #FF6B00;
+}
+
+.main-block__image {
+	flex: 0 1 50%;
+	position: absolute;
+	width: 501px;
+	height: 657px;
+	top: -5%;
+	right: 15%;
+	object-fit: contain;
+	z-index: 8;
+	
+}
+
+.main-block__image img {
+} 
+@media (max-width: 767px) {
+	.main-block {
+		padding-top: 30px;
+	}
+	.main-block__container {
+		padding-bottom: 80px;
+	}
+	.main-block__title {
+		font-size: 50px;
+		line-height: 103%;
+		
+	}
+	.main-block__text {
+		font-size: 16px;
+		line-height: 171%;
+		margin: 0 0 30px 0;
+	}
+}
+
+@media (max-width: 600px) {
+	.main-block__title {
+		font-size: 24px;
+		line-height: 103%;
+	}
+
+	.main-block__text {
+		font-size: 16px;
+		line-height: 151%;
+		margin: 0 0 30px 0;
+	}
+}
+
+@media (max-width: 992px) {
+	.main-block__image {		
+		top: -5%;
+		right: 0;		
+	}	
+}
+
+@media (max-width: 840px) {
+	.main-block__image img {
+		opacity: 0.5;
+	} 	
+	.main-block__container::after,
+	.main-block__container::before {
+		display: none;
+	}
+}
+
+@media (max-width: 477px) {
+	.main-block__image {				
+		right: -20%;		
+	}	
+}
+
+@media (max-width: 400px) {
+	.main-block__body {
+		flex: 1 1 100%;
+	}
+	.main-block__image {				
+		display: none;		
+	}	
+	.main-block__container::after {
+		display: block;
+		opacity: 0.5;
+	}
+	.main-block__container {		
+		padding-bottom: 40px;
+	}
+}
+
+/* @media (max-width: 767px) {
+	.main-block__image {		
+		top: 3%;
+		right: 0;		
+	}	
+} */
