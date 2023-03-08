@@ -102,16 +102,6 @@ body {
 	margin: 0 auto;
 }
 
-/* .btn {display: flex;
-	flex-direction: column;
-	align-items: center;
-	text-align: center;
-	justify-content: center;
-	border: 1px solid #FF6B00;
-	transition: all 0.3s ease 0s;	
-	
-} */
-
 ._ibg {
 	position: relative;
 }
@@ -131,8 +121,9 @@ body {
 }
 .page__main-block {
 }
-
 .page__advantages {
+}
+.page__advise {
 }
 /*-------------------------------HEADER--------------------------------------------*/
 
@@ -420,9 +411,7 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: flex-start;
-	/* max-width: 600px;
-	margin: 0 auto; */
-	 margin: 0 0 0 190px; 
+	margin: 0 0 0 190px; 
 }
 .advantages-item {	
 	flex: 0 1 141px;
@@ -460,9 +449,100 @@ body {
 	.advantages-item:not(:last-child) {
 		margin: 0 0 20px 0;
 	}
-	.advantages__items {		
+	.advantages__items {
 		justify-content: center;
 		display: flex;
 		margin-left: 0;
 	}
 }
+
+/*----------------ADVISE------------------------ */
+
+.advise {
+	padding: 130px 0 85px 0;
+}
+.advise__container {
+	text-align: center;
+}
+
+.advise__header {
+	font-weight: 700;
+	font-size: 48px;
+	line-height: 129%;
+	text-align: center;
+	color: #1D2B4F;
+	margin: 0 0 50px 0;
+}
+
+.advise__body {
+	
+}
+
+.advise__items {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 0 -16.5px;
+}
+
+.advise__item {
+	
+}
+.item-advise {
+	flex: 0 1 25%;
+	padding: 0 16.5px 0 16.5px;
+	min-height: 100%;
+	
+}
+
+.item-advise__body {
+	border: 1px solid #E5E6E8;
+	padding: 40px 5px 49px;
+	min-height: 100%;
+}
+
+.item-advise__icon:not(:last-child) {
+	margin: 0 0 30px 0;
+}
+.item-advise__label {
+	font-size: 21px;
+	line-height: 137.5%;
+	letter-spacing: -0.02em;
+	text-transform: capitalize;
+	color: #1D2B4F;
+}
+@media (min-width: 1100px) {
+	.item-advise__label {
+		font-size: 24px;
+	}
+}	
+
+@media (max-width: 767px) {	
+	.advise__header {
+		font-size: 40px;
+		margin: 0 0 20px 0;
+	}
+	
+		.advise__items {
+			justify-content: space-around;
+			margin-bottom: -20px;
+		}
+		.item-advise {
+			flex: 0 1 50%;
+			max-width: 325px;	
+			margin-bottom: 20px;		
+		}
+	}
+
+	@media (max-width: 479px) {
+		.advise {
+			padding: 60px 0 30px 0;
+		}
+		.advise__header {
+			font-size: 28px;
+			margin: 0 0 35px 0;
+		}
+		.item-advise {
+			flex: 1 1 100%;
+		}
+	}
