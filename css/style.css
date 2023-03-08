@@ -472,6 +472,31 @@ body {
 	text-align: center;
 	color: #1D2B4F;
 	margin: 0 0 50px 0;
+	
+}
+
+.advise__header--part {
+	position: relative;
+}
+
+.advise__header--part::after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 1px;
+	bottom: 10px;
+	right: 0;
+	background-color: #FB6739;
+}
+
+.advise__header--part::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 1px;
+	bottom: 6px;
+	right: 0;
+	background-color: #FB6739;
 }
 
 .advise__body {
