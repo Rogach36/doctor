@@ -125,6 +125,10 @@ body {
 }
 .page__advise {
 }
+.page__specialities {
+}
+.page__cardiology {		
+}
 /*-------------------------------HEADER--------------------------------------------*/
 
 .header {
@@ -570,4 +574,331 @@ body {
 		.item-advise {
 			flex: 1 1 100%;
 		}
+
+		.advise__header--part::after {
+			bottom: 5px;
+		}
+		
+		.advise__header--part::before {
+			bottom: 2px;
+		}
+	}
+	/*------------------------SPECIALITIES-------------------------*/
+
+	.specialities {
+		padding: 0;
+	}
+
+	@media (max-width: 1155px) {
+		.specialities {
+			padding: 45px 0 0 0;
+		}
+	}
+	.specialities__container {
+		position: relative;
+	}	
+	.specialities__top>* {		
+		margin: 0 0 25px 0;	
+	}
+
+
+
+	.specialities__title {
+		flex: 0 1 50%;
+		font-weight: 700;
+		font-size: 48px;
+		line-height: 135%;
+		color: #1D2B4F;
+		text-align: center;
+	}
+
+
+.specialities__title span {
+	position: relative;
+}
+
+.specialities__title span::after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 1px;
+	bottom: 10px;
+	right: 0;
+	background-color: #FB6739;
+}
+
+.specialities__title span::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 1px;
+	bottom: 6px;
+	right: 0;
+	background-color: #FB6739;
+}
+
+	.specialities__text {
+		flex: 0 1 50%;
+		font-weight: 400;
+		line-height: 178%;
+		color: #5C6680;
+		text-align: center;
+	}
+
+	@media (min-width: 776px) {
+		.specialities {
+			padding: 85px 0 0 0;
+		}
+		.specialities__top {
+			display: flex;
+			justify-content: space-between;
+			margin: 0 0 52px 0;			
+		}
+		.specialities__title {			
+			margin: 0;	
+			padding-right: 20px;	
+		}		
+	}
+	/*------------------------CATEGORY-------------------------*/
+	.specialities__category {
+		
+	}
+
+	.category {
+		display: flex;
+		justify-content: space-between;
+	}
+	.category__list {
+		display: flex;		
+	}
+
+		.category__item {
+		padding: 42px 0 62px 0;
+		flex: 1 1 16.667%;
+	}
+
+	
+	@media (max-width: 1155px) {
+		.category__list {
+			flex-wrap: wrap	;	
+		}
+		.category__item {
+			flex: 0 1 25%;
+		}
+		.category {
+		display: flex;
+		/* justify-content: space-between; */
+	}
+}
+
+	.category__item:not(:last-child) {
+		margin: 0 65px 0 0;
+	}
+
+	.category__item:first-child {
+		background-color: #FEF4F1;
+		padding: 42px 20px 62px 16px;
+		border-radius: 15px 15px 0px 0px;
+		margin-right: 45px;
+	}
+
+	@media (max-width: 1155px) {
+		.category__list {
+			/* margin: 0 -150px; */
+			justify-content: flex-end;
+			flex-direction: row-reverse;
+		}
+
+		.category__item {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 22px 16px 22px 16px;
+		}
+		.category__item:first-child {
+			padding: 22px 16px 22px 16px;
+			position: relative;
+			left: 0;
+		}
+		
+		.category__item--1 {
+			order: 6;			
+		}
+		.category__item--2 {
+			order: 5;
+		}
+		.category__item--3 {
+			order: 4;
+		}
+
+		.category__item:first-child {
+			margin: 0;
+		}
+
+		.category__arrows {
+			align-self: flex-start;
+		}
+	}
+
+	
+
+	.category__link {
+		font-size: 24px;
+		line-height: 125%;
+		letter-spacing: -0.02em;
+		color: #788093;
+		cursor: pointer;
+		display: inline-block;
+	}
+	.category__arrows {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		min-width: 62px;
+		/* padding-left: 20px; */
+	}
+	.category__button-left {
+		padding: 42px 0 62px 0;
+	}
+	.category__button-right {
+		padding: 42px 0 62px 0;
+	}
+
+	@media (max-width: 776px) {
+		.category__item:not(:last-child) {
+			margin: 0;
+		}
+		.category__item {
+			flex: 0 1 40%;
+		}
+
+		.category__arrows {
+			display: none;
+		}
+	}
+
+	@media (max-width: 550px) {		
+		.category__item {
+			flex: 0 1 100%;
+		}
+		.category__item--1 {
+			flex: 0 1 50%;			
+		}
+		.category__item:not(:last-child) {
+			margin: 0 auto;
+		}
+	}
+	/*------------------------CARDIOLOGY-------------------------*/
+	.cardiology{
+		
+		padding: 0 0 136px 0;
+	}
+
+	.cardiology__container {
+		position: relative;
+	}
+	.cardiology__container::after {
+		content: "";
+		position: absolute;
+		width: 100vw;
+		height: 100%;
+		background: #FEF4F1;
+		top: 0;
+		/* right: 98.8%;	 */
+		left: 15px;
+		/* transform: translate(100%, 0);		 */
+	}
+	
+	
+	.cardiology__body {
+		display: flex;
+		position: relative;
+		padding: 100px 0 136px 50px;
+		z-index: 3;
+	}
+
+	.content-cardiology {
+		flex: 1 1 52.4%;
+	}
+	.cardiology__content {
+		padding-right: 40px;
+	}
+	.content-cardiology>*:not(:last-child) {
+		margin: 0 0 30px 0;
+	}
+	.content-cardiology__title {
+		font-weight: 800;
+		font-size: 36px;
+		line-height: 83%;
+		letter-spacing: -0.03em;
+		text-transform: capitalize;
+		color: #1D2B4F;
+	}
+	.content-cardiology__subtitle {
+		font-size: 24px;
+		line-height: 158%;
+		text-transform: capitalize;
+		color: #1D2B4F;
+	}
+	.content-cardiology__text {
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 178%;		
+	}
+	.content-cardiology__btn {
+		display: inline-flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		min-height: 66px;
+		margin: 20px 0 0px 0;
+		border: 1px solid #FF6B00;
+		background-color: #FF6B00;
+		color: #fff;
+		padding: 5px 28px;		
+		transition: all 0.3s ease 0s;
+	}
+	
+	.content-cardiology__btn:hover {
+		background-color: #fff;
+		color: #FF6B00;
+	}
+
+
+	.cardiology__image {
+		position: relative;
+		flex: 0 1 43.52%;
+		padding-bottom: 40.8%;
+	}
+
+	.cardiology__image img{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		object-fit: contain;
+	}
+
+	@media (max-width: 1080px) {
+		.cardiology__image {
+			align-self: flex-start;
+		}
+	}
+
+	@media (max-width: 992px) {
+		.cardiology__body {
+			padding: 50px 0 50px 50px;
+		}
+	
+		.cardiology__image {
+			display: none;		
+		}
+		
+	}
+
+	@media (max-width: 776px) {
+		
+		
 	}
