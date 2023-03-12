@@ -129,6 +129,8 @@ body {
 }
 .page__cardiology {		
 }
+.page__best-doctors {
+}
 /*-------------------------------HEADER--------------------------------------------*/
 
 .header {
@@ -255,7 +257,7 @@ body {
 	content: "";
 	right: 0;
 	top: -10%;
-	width: 100%;
+	width: 100vw;
 	height: 110%;
 	background-color: #131E3A;
 	transform: translate(88%, 0px);
@@ -368,7 +370,7 @@ body {
 
 @media (max-width: 600px) {
 	.main-block__title {
-		font-size: 24px;
+		font-size: 32px;
 		line-height: 103%;
 	}
 
@@ -740,7 +742,9 @@ body {
 		}
 	}
 
-	
+	.category__item--1 .category__link {
+		color: #1D2B4F;
+	}
 
 	.category__link {
 		font-size: 24px;
@@ -789,9 +793,8 @@ body {
 		}
 	}
 	/*------------------------CARDIOLOGY-------------------------*/
-	.cardiology{
-		
-		padding: 0 0 136px 0;
+	.cardiology {		
+		padding: 0 0 133px 0;
 	}
 
 	.cardiology__container {
@@ -881,24 +884,243 @@ body {
 		object-fit: contain;
 	}
 
-	@media (max-width: 1080px) {
-		.cardiology__image {
-			align-self: flex-start;
-		}
-	}
-
 	@media (max-width: 992px) {
+		.cardiology {
+			padding-bottom: 80px;
+		}
 		.cardiology__body {
 			padding: 50px 0 50px 50px;
 		}
 	
 		.cardiology__image {
 			display: none;		
+		}		
+	}
+
+
+	@media (max-width: 1080px) {
+		.cardiology__image {
+			align-self: flex-start;
 		}
+	}
+
+	
+	/*--------------------------BEST-DOCTORS-------------------------*/
+	
+	.best-doctors {
+		padding: 133px 0 60px 0;
+	}
+	.best-doctors__container {
+		position: relative;
+	}
+
+	.best-doctors__container::before {
+		content: "";
+		position: absolute;
+		width: 100vw;
+		height: 394px;
+		background-color: #14171D;
+		top: -20%;
+		left: 0;
+		z-index: 1;
+		transform: translate(-90%, 0);
+	}
+	
+	.best-doctors__body {
+		display: flex;
+	}
+
+	.best-doctors__image {
+		flex: 0 1 57%;
+		position: relative;
+		padding-bottom: 41.79%;
+		left: -7.47%;
+		z-index: 3;
+	}
+
+	.best-doctors__image img {		
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		object-fit: contain;
 		
 	}
 
-	@media (max-width: 776px) {
-		
-		
+	.best-doctors__image::after {
+		content: "";
+		position: absolute;		
+		width: 237px;
+		height: 149px;
+		top: -14%;
+		right: -11%;
+		/* background: #FFF7F0; */
+		background: url("/img/best_doctors/02.jpg");
+		box-shadow: 0px 0px 48px rgba(172, 187, 201, 0.48);
 	}
+
+	.best-doctors__content {
+		flex: 1 1 63%;
+		padding: 0 0 0 34px;
+	}
+	.best-doctors__title {
+		font-weight: 700;
+		font-size: 48px;
+		line-height: 121%;
+		letter-spacing: -0.04em;
+		color: #1D2B4F;
+		margin: 0 0 24px 0;
+	}
+
+	.best-doctors__title span {
+		position: relative;
+	}
+	
+	.best-doctors__title span::after {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 1px;
+		bottom: 10px;
+		right: 0;
+		background-color: #FB6739;
+	}
+
+	.best-doctors__title span::before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 1px;
+		bottom: 6px;
+		right: 0;
+		background-color: #FB6739;
+	}
+
+	.best-doctors__subtitle {
+		font-family: 'Poppins';
+		font-weight: 400;
+		line-height: 178%;
+		margin: 0 0 48px 0;
+	}
+	.best-doctors__list {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 0 60px 0;
+	}
+	.best-doctors__item {
+		flex: 0 1 25%;
+		min-width: 215px;
+		font-size: 24px;
+		line-height: 125%;
+		text-transform: capitalize;
+		color: #1D2B4F;
+		margin-bottom: 42px;
+	}
+
+		.best-doctors__item::before {
+		content: "";
+		width: 20px;
+		height: 20px;		
+		display: inline-block;
+		background: url("/img/best_doctors/icons/01.svg") 0px 0 no-repeat;
+		margin-right: 10px;
+	}
+
+	.best-doctors__item:first-child {
+		margin: 0 49px 42px 0;
+	}
+
+	.best-doctors__item:nth-child(odd) {
+		margin: 0 65px 0 0;
+
+	}
+	.best-doctors__item:last-child {
+		margin-bottom: 0;
+		min-width: 225px;
+	}
+	.best-doctors__btn {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		line-height: 138%;
+		text-transform: capitalize;
+		color: #FFFFFF;
+		background: #FF6B00;
+		min-height: 60px;
+		padding: 5px 41px;
+	}
+
+	@media (max-width: 1325px) {
+		.best-doctors__container::before {
+			display: none;
+		}
+		.best-doctors__image {
+			left: 0;
+		}
+	}
+
+	@media (max-width: 1055px) {
+		.best-doctors__title {
+			font-size: 42px;
+		}
+		.best-doctors__item {
+			font-size: inherit;
+			min-width: 180px;
+			display: flex;
+			flex-wrap: nowrap;
+		}
+	}
+	@media (max-width: 992px) {
+		.best-doctors {
+			padding: 0 0 60px 0;
+		}
+		.best-doctors__image img {
+			top: 3px;
+		}
+		.best-doctors__image {
+			align-self: flex-start;
+		}
+		.best-doctors__title {
+			font-size: 36px;			
+			margin: 0 0 24px 0;
+		}
+		.best-doctors__subtitle {
+			margin: 0 0 17px 0;
+		}
+		.best-doctors__list {			
+			margin: 0 0 21px 0;
+		}
+		.best-doctors__item {			
+			margin-bottom: 3px;
+			flex: 0 1 50%;
+			max-width: 150px;
+		}
+
+		.best-doctors__item:first-child {
+			margin: 0;
+		}
+	
+		.best-doctors__item:nth-child(odd) {
+			margin: 0;
+	
+		}
+		.best-doctors__item:last-child {
+			max-width: 150px	
+		} 
+
+		.best-doctors__image::after {
+			display: none;
+		}		
+	}
+
+	@media (max-width: 870px) {
+		.best-doctors__image {
+			display: none;
+		}
+	}
+	
+	
+
+	
