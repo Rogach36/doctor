@@ -1544,7 +1544,6 @@ body {
 		}	
 		.footer__columns {
 			flex: 1 1 50%;
-			/* margin-right: 100px; */
 		}
 		.footer__column:not(:last-child) {
 			margin-right: 70px;
@@ -1571,3 +1570,9 @@ body {
 			margin-left: 10px;
 		}
 	}
+
+	@media (max-width: 750px) {
+		.menu-column__list--social li:not(:last-child) {
+			margin-left: 10px;
+		}
+	}	
