@@ -1515,16 +1515,16 @@ body {
 		height: 23px;
 		top: 1px;
 		left: 0;
-		background: url("/img/footer/et_linkedin.png") 0 0 no-repeat;
+		background: url("../img/footer/et_linkedin.png") 0 0 no-repeat;
 		
 	}
 
 	.menu-column__link--social2::before {
-		background: url("/img/footer/fb.png") 0 0 no-repeat;
+		background: url("../img/footer/fb.png") 0 0 no-repeat;
 		
 	}
 	.menu-column__link--social3::before {
-		background: url("/img/footer/twit.png") 0 0 no-repeat;
+		background: url("../img/footer/twit.png") 0 0 no-repeat;
 		
 	}
 
@@ -1562,7 +1562,6 @@ body {
 	@media (max-width: 750px) {	
 		.footer__columns {
 			flex-wrap: wrap;
-			justify-content: center;
 		}	
 		.menu-column__list--social {
 			display: flex;
